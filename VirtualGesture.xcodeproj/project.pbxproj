@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB856C65154D3B3700447AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856C64154D3B3700447AB2 /* Foundation.framework */; };
+		AB856CA5154D3B9B00447AB2 /* UIView+VirtualLongPress.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB856CA6154D3B9B00447AB2 /* UIView+VirtualLongPress.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */; };
+		AB856CA7154D3BEB00447AB2 /* VirtualGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856C69154D3B3700447AB2 /* VirtualGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB856CBE154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */; };
+		AB856CBF154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */; };
+		AB856CC2154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */; };
+		AB856CC3154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB856CA1154D3B6200447AB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB856C9D154D3B6100447AB2 /* VirtualGestureExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB856C7C154D3B6000447AB2;
+			remoteInfo = VirtualGestureExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB856C61154D3B3700447AB2 /* libVirtualGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVirtualGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB856C64154D3B3700447AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB856C68154D3B3700447AB2 /* VirtualGesture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VirtualGesture-Prefix.pch"; sourceTree = "<group>"; };
+		AB856C69154D3B3700447AB2 /* VirtualGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualGesture.h; sourceTree = "<group>"; };
+		AB856C9D154D3B6100447AB2 /* VirtualGestureExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirtualGestureExample.xcodeproj; path = VirtualGestureExample/VirtualGestureExample.xcodeproj; sourceTree = "<group>"; };
+		AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VirtualLongPress.h"; sourceTree = "<group>"; };
+		AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VirtualLongPress.m"; sourceTree = "<group>"; };
+		AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VGVirtualLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VGVirtualLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+VirtualGesture.h"; sourceTree = "<group>"; };
+		AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+VirtualGesture.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB856C5E154D3B3700447AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856C65154D3B3700447AB2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB856C56154D3B3700447AB2 = {
+			isa = PBXGroup;
+			children = (
+				AB856C9D154D3B6100447AB2 /* VirtualGestureExample.xcodeproj */,
+				AB856C66154D3B3700447AB2 /* VirtualGesture */,
+				AB856C63154D3B3700447AB2 /* Frameworks */,
+				AB856C62154D3B3700447AB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB856C62154D3B3700447AB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C61154D3B3700447AB2 /* libVirtualGesture.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB856C63154D3B3700447AB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C64154D3B3700447AB2 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB856C66154D3B3700447AB2 /* VirtualGesture */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C69154D3B3700447AB2 /* VirtualGesture.h */,
+				AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */,
+				AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */,
+				AB856C67154D3B3700447AB2 /* Supporting Files */,
+				AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */,
+				AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */,
+				AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */,
+				AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */,
+			);
+			path = VirtualGesture;
+			sourceTree = "<group>";
+		};
+		AB856C67154D3B3700447AB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C68154D3B3700447AB2 /* VirtualGesture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB856C9E154D3B6100447AB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB856CA2154D3B6200447AB2 /* VirtualGestureExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AB856C5F154D3B3700447AB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856CA5154D3B9B00447AB2 /* UIView+VirtualLongPress.h in Headers */,
+				AB856CA7154D3BEB00447AB2 /* VirtualGesture.h in Headers */,
+				AB856CBE154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h in Headers */,
+				AB856CC2154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AB856C60154D3B3700447AB2 /* VirtualGesture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB856C6E154D3B3700447AB2 /* Build configuration list for PBXNativeTarget "VirtualGesture" */;
+			buildPhases = (
+				AB856C5D154D3B3700447AB2 /* Sources */,
+				AB856C5E154D3B3700447AB2 /* Frameworks */,
+				AB856C5F154D3B3700447AB2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirtualGesture;
+			productName = VirtualGesture;
+			productReference = AB856C61154D3B3700447AB2 /* libVirtualGesture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB856C58154D3B3700447AB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = AB856C5B154D3B3700447AB2 /* Build configuration list for PBXProject "VirtualGesture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB856C56154D3B3700447AB2;
+			productRefGroup = AB856C62154D3B3700447AB2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AB856C9E154D3B6100447AB2 /* Products */;
+					ProjectRef = AB856C9D154D3B6100447AB2 /* VirtualGestureExample.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				AB856C60154D3B3700447AB2 /* VirtualGesture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AB856CA2154D3B6200447AB2 /* VirtualGestureExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = VirtualGestureExample.app;
+			remoteRef = AB856CA1154D3B6200447AB2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB856C5D154D3B3700447AB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856CA6154D3B9B00447AB2 /* UIView+VirtualLongPress.m in Sources */,
+				AB856CBF154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m in Sources */,
+				AB856CC3154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB856C6C154D3B3700447AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB856C6D154D3B3700447AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB856C6F154D3B3700447AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VirtualGesture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VirtualGesture/VirtualGesture-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB856C70154D3B3700447AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VirtualGesture.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VirtualGesture/VirtualGesture-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB856C5B154D3B3700447AB2 /* Build configuration list for PBXProject "VirtualGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB856C6C154D3B3700447AB2 /* Debug */,
+				AB856C6D154D3B3700447AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB856C6E154D3B3700447AB2 /* Build configuration list for PBXNativeTarget "VirtualGesture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB856C6F154D3B3700447AB2 /* Debug */,
+				AB856C70154D3B3700447AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB856C58154D3B3700447AB2 /* Project object */;
+}

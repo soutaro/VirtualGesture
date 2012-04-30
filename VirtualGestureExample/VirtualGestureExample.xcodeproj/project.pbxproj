@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB856C81154D3B6100447AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856C80154D3B6000447AB2 /* UIKit.framework */; };
+		AB856C83154D3B6100447AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856C82154D3B6100447AB2 /* Foundation.framework */; };
+		AB856C85154D3B6100447AB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856C84154D3B6100447AB2 /* CoreGraphics.framework */; };
+		AB856C8B154D3B6100447AB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB856C89154D3B6100447AB2 /* InfoPlist.strings */; };
+		AB856C8D154D3B6100447AB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856C8C154D3B6100447AB2 /* main.m */; };
+		AB856C91154D3B6100447AB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856C90154D3B6100447AB2 /* AppDelegate.m */; };
+		AB856C94154D3B6100447AB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856C93154D3B6100447AB2 /* ViewController.m */; };
+		AB856C97154D3B6100447AB2 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB856C95154D3B6100447AB2 /* ViewController.xib */; };
+		AB856CA9154D3CEB00447AB2 /* libVirtualGesture.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856CA8154D3CEB00447AB2 /* libVirtualGesture.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB856C7C154D3B6000447AB2 /* VirtualGestureExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtualGestureExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB856C80154D3B6000447AB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB856C82154D3B6100447AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB856C84154D3B6100447AB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB856C88154D3B6100447AB2 /* VirtualGestureExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VirtualGestureExample-Info.plist"; sourceTree = "<group>"; };
+		AB856C8A154D3B6100447AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB856C8C154D3B6100447AB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB856C8E154D3B6100447AB2 /* VirtualGestureExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VirtualGestureExample-Prefix.pch"; sourceTree = "<group>"; };
+		AB856C8F154D3B6100447AB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB856C90154D3B6100447AB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB856C92154D3B6100447AB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AB856C93154D3B6100447AB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AB856C96154D3B6100447AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AB856CA8154D3CEB00447AB2 /* libVirtualGesture.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVirtualGesture.a; path = "../../../Library/Developer/Xcode/DerivedData/VirtualGesture-dqeaiaxjaezqjdbiazrcypszpqck/Build/Products/Debug-iphoneos/libVirtualGesture.a"; sourceTree = "<group>"; };
+		AB856CB0154D3F4C00447AB2 /* VirtualGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VirtualGesture.h; path = ../VirtualGesture/VirtualGesture.h; sourceTree = SOURCE_ROOT; };
+		AB856CBB154D62B500447AB2 /* UIView+VirtualLongPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+VirtualLongPress.h"; path = "../../VirtualGesture/UIView+VirtualLongPress.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB856C79154D3B6000447AB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856CA9154D3CEB00447AB2 /* libVirtualGesture.a in Frameworks */,
+				AB856C81154D3B6100447AB2 /* UIKit.framework in Frameworks */,
+				AB856C83154D3B6100447AB2 /* Foundation.framework in Frameworks */,
+				AB856C85154D3B6100447AB2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB856C71154D3B6000447AB2 = {
+			isa = PBXGroup;
+			children = (
+				AB856CA8154D3CEB00447AB2 /* libVirtualGesture.a */,
+				AB856C86154D3B6100447AB2 /* VirtualGestureExample */,
+				AB856C7F154D3B6000447AB2 /* Frameworks */,
+				AB856C7D154D3B6000447AB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB856C7D154D3B6000447AB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C7C154D3B6000447AB2 /* VirtualGestureExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB856C7F154D3B6000447AB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C80154D3B6000447AB2 /* UIKit.framework */,
+				AB856C82154D3B6100447AB2 /* Foundation.framework */,
+				AB856C84154D3B6100447AB2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB856C86154D3B6100447AB2 /* VirtualGestureExample */ = {
+			isa = PBXGroup;
+			children = (
+				AB856C8F154D3B6100447AB2 /* AppDelegate.h */,
+				AB856C90154D3B6100447AB2 /* AppDelegate.m */,
+				AB856C92154D3B6100447AB2 /* ViewController.h */,
+				AB856C93154D3B6100447AB2 /* ViewController.m */,
+				AB856C95154D3B6100447AB2 /* ViewController.xib */,
+				AB856C87154D3B6100447AB2 /* Supporting Files */,
+			);
+			path = VirtualGestureExample;
+			sourceTree = "<group>";
+		};
+		AB856C87154D3B6100447AB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB856CBB154D62B500447AB2 /* UIView+VirtualLongPress.h */,
+				AB856CB0154D3F4C00447AB2 /* VirtualGesture.h */,
+				AB856C88154D3B6100447AB2 /* VirtualGestureExample-Info.plist */,
+				AB856C89154D3B6100447AB2 /* InfoPlist.strings */,
+				AB856C8C154D3B6100447AB2 /* main.m */,
+				AB856C8E154D3B6100447AB2 /* VirtualGestureExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB856C7B154D3B6000447AB2 /* VirtualGestureExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB856C9A154D3B6100447AB2 /* Build configuration list for PBXNativeTarget "VirtualGestureExample" */;
+			buildPhases = (
+				AB856C78154D3B6000447AB2 /* Sources */,
+				AB856C79154D3B6000447AB2 /* Frameworks */,
+				AB856C7A154D3B6000447AB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirtualGestureExample;
+			productName = VirtualGestureExample;
+			productReference = AB856C7C154D3B6000447AB2 /* VirtualGestureExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB856C73154D3B6000447AB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = AB856C76154D3B6000447AB2 /* Build configuration list for PBXProject "VirtualGestureExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB856C71154D3B6000447AB2;
+			productRefGroup = AB856C7D154D3B6000447AB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB856C7B154D3B6000447AB2 /* VirtualGestureExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB856C7A154D3B6000447AB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856C8B154D3B6100447AB2 /* InfoPlist.strings in Resources */,
+				AB856C97154D3B6100447AB2 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB856C78154D3B6000447AB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB856C8D154D3B6100447AB2 /* main.m in Sources */,
+				AB856C91154D3B6100447AB2 /* AppDelegate.m in Sources */,
+				AB856C94154D3B6100447AB2 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB856C89154D3B6100447AB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB856C8A154D3B6100447AB2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB856C95154D3B6100447AB2 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB856C96154D3B6100447AB2 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB856C98154D3B6100447AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		AB856C99154D3B6100447AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB856C9B154D3B6100447AB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VirtualGestureExample/VirtualGestureExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "VirtualGestureExample/VirtualGestureExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/VirtualGesture-dqeaiaxjaezqjdbiazrcypszpqck/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB856C9C154D3B6100447AB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VirtualGestureExample/VirtualGestureExample-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "VirtualGestureExample/VirtualGestureExample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/VirtualGesture-dqeaiaxjaezqjdbiazrcypszpqck/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB856C76154D3B6000447AB2 /* Build configuration list for PBXProject "VirtualGestureExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB856C98154D3B6100447AB2 /* Debug */,
+				AB856C99154D3B6100447AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB856C9A154D3B6100447AB2 /* Build configuration list for PBXNativeTarget "VirtualGestureExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB856C9B154D3B6100447AB2 /* Debug */,
+				AB856C9C154D3B6100447AB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB856C73154D3B6000447AB2 /* Project object */;
+}
