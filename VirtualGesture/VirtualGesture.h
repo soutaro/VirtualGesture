@@ -9,4 +9,4 @@
 #import <Foundation/Foundation.h>
 
 #import "UIView+VirtualLongPress.h"
-
+#import "UIView+VirtualSwipe.h"

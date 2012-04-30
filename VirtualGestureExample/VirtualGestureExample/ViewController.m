@@ -33,7 +33,7 @@
 	
 	UIPanGestureRecognizer* pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognized:)];
 	//pan.maximumNumberOfTouches = 1;
-	[self.longPressView addGestureRecognizer:pan];
+	//[self.longPressView addGestureRecognizer:pan];
 	
 	UIPinchGestureRecognizer* pinch = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureRecognized:)];
 	[self.longPressView addGestureRecognizer:pinch];
@@ -56,6 +56,10 @@
 	points[2] = CGPointMake(30, 20);
 	[self.longPressView recognizeLongPress:1 points:3 sequenceOfTouchesInView:points];
 	free(points);
+}
+
+- (IBAction)swipeButtonTap:(id)sender {
+	[self.longPressView recognizeSwipe:UISwipeGestureRecognizerDirectionRight];
 }
 
 - (void)longPressWithTwoFingerRecognized:(UILongPressGestureRecognizer *)gesture {

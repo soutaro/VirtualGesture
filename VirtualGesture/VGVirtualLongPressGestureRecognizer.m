@@ -21,6 +21,8 @@
 	free(self->_points);
 }
 
+#pragma mark - NSProxy
+
 - (void)forwardInvocation:(NSInvocation *)invocation {
 	[invocation setTarget:self->_parent];
 	[invocation invoke];

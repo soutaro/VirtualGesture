@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIView *longPressView;
 
 - (IBAction)simulateLongPress:(id)sender;
+- (IBAction)swipeButtonTap:(id)sender;
 
 @end
