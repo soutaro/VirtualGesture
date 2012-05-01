@@ -27,8 +27,8 @@
 
 - (void)recognizePinch:(CGFloat)scale duration:(NSTimeInterval)duration point:(CGPoint)point touches:(NSUInteger)touches {
 	UIPinchGestureRecognizer* original = nil;
-	
-	for (UIPinchGestureRecognizer* r in self.gestureRecognizers) {
+		
+	for (UIGestureRecognizer* r in self.gestureRecognizers) {
 		if ([r isKindOfClass:[UIPinchGestureRecognizer class]]) {
 			UIPinchGestureRecognizer* a = (UIPinchGestureRecognizer*)r;
 			original = a;
