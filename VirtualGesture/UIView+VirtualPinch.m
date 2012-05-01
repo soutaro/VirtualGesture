@@ -49,6 +49,7 @@
 	
 	VGVirtualPinchGestureRecognizer* v = [[VGVirtualPinchGestureRecognizer alloc] initWithParent:original];
 	[v setPoint:point];
+	v.numberOfTouches = touches;
 	v.velocity = velocity;
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
