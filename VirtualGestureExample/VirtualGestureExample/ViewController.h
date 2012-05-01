@@ -16,5 +16,6 @@
 
 - (IBAction)simulateLongPress:(id)sender;
 - (IBAction)swipeButtonTap:(id)sender;
+- (IBAction)pinchButtonTap:(id)sender;
 
 @end

@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VGVirtualLongPressGestureRecognizer : NSProxy
+#import "VGVirtualGestureRecognizer.h"
+
+@interface VGVirtualLongPressGestureRecognizer : VGVirtualGestureRecognizer
 
 + (id)newVirtualLongPressGestureRecognizer:(UILongPressGestureRecognizer*)parent;
 
-- (id)initWithParent:(UILongPressGestureRecognizer*)parent;
-
-- (void)setState:(UIGestureRecognizerState)state;
 - (void)setTouches:(NSUInteger)fingers points:(CGPoint*)points;
 - (void)clearTouches;
 

@@ -9,28 +9,14 @@
 #import "VGVirtualLongPressGestureRecognizer.h"
 
 @implementation VGVirtualLongPressGestureRecognizer {
-	UILongPressGestureRecognizer* _parent;
 	CGPoint* _points;
 	NSUInteger _fingers;
-	UIGestureRecognizerState _state;
 }
 
 #pragma mark - NSObject
 
 - (void)dealloc {
 	free(self->_points);
-}
-
-#pragma mark - NSProxy
-
-- (void)forwardInvocation:(NSInvocation *)invocation {
-	[invocation setTarget:self->_parent];
-	[invocation invoke];
-	return;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel {
-	return [self->_parent methodSignatureForSelector:sel];
 }
 
 #pragma mark - UIGestureRecognizer
@@ -46,19 +32,15 @@
 	
 	CGPoint point = CGPointMake(x/self->_fingers, y/self->_fingers);
 	
-	return [self->_parent.view convertPoint:point toView:view];
+	return [self.parent.view convertPoint:point toView:view];
 }
 
 - (CGPoint)locationOfTouch:(NSUInteger)touchIndex inView:(UIView *)view {
-	return [self->_parent.view convertPoint:self->_points[touchIndex] toView:view];
+	return [self.parent.view convertPoint:self->_points[touchIndex] toView:view];
 }
 
 - (NSUInteger)numberOfTouches {
 	return _fingers;
-}
-
-- (UIGestureRecognizerState)state {
-	return self->_state;
 }
 
 #pragma mark -
@@ -66,18 +48,6 @@
 +(id)newVirtualLongPressGestureRecognizer:(UILongPressGestureRecognizer *)parent {
 	VGVirtualLongPressGestureRecognizer* g = [[VGVirtualLongPressGestureRecognizer alloc] initWithParent:parent];
 	return g;
-}
-
-- (void)setState:(UIGestureRecognizerState)state {
-	self->_state = state;
-}
-
-- (id)initWithParent:(UILongPressGestureRecognizer *)parent {
-	self->_parent = parent;
-	self->_points = NULL;
-	self->_fingers = 0;
-	
-	return self;
 }
 
 - (void)setTouches:(NSUInteger)fingers points:(CGPoint *)points {

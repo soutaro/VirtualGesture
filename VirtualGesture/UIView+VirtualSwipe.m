@@ -37,7 +37,8 @@
 		return;
 	}
 	
-	VGVirtualSwipeGestureRecognizer* v = [[VGVirtualSwipeGestureRecognizer alloc] initWithOriginalGestureRecognizer:original];
+	VGVirtualSwipeGestureRecognizer* v = [[VGVirtualSwipeGestureRecognizer alloc] initWithParent:original];
+	v.numberOfTouches = touches;
 	[v setPoint:point];
 	fireGestureRecognizer(v, original);
 }

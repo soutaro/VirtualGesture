@@ -119,5 +119,9 @@
 	[self.tableView recognizeSwipe:UISwipeGestureRecognizerDirectionRight];
 }
 
+- (IBAction)pinchButtonTap:(id)sender {
+	[self.longPressView recognizePinch:3];
+}
+
 
 @end
