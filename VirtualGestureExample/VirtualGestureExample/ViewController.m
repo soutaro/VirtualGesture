@@ -15,10 +15,13 @@
 - (void)panGestureRecognized:(UIPanGestureRecognizer*)gesture;
 - (void)pinchGestureRecognized:(UIPinchGestureRecognizer*)gesture;
 
+- (void)handleSwipe:(UIGestureRecognizer*)g;
+
 @end
 
 @implementation ViewController
 @synthesize longPressView;
+@synthesize tableView;
 
 - (void)viewDidLoad
 {
@@ -41,6 +44,7 @@
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
     [super viewDidUnload];
 }
 
@@ -49,18 +53,35 @@
 	return YES;
 }
 
-- (IBAction)simulateLongPress:(id)sender {
-	CGPoint* points = malloc(sizeof(CGPoint)*3);
-	points[0] = CGPointMake(10, 20);
-	points[1] = CGPointMake(20, 20);
-	points[2] = CGPointMake(30, 20);
-	[self.longPressView recognizeLongPress:1 points:3 sequenceOfTouchesInView:points];
-	free(points);
+#pragma mark - UITableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return 1;
 }
 
-- (IBAction)swipeButtonTap:(id)sender {
-	[self.longPressView recognizeSwipe:UISwipeGestureRecognizerDirectionRight];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 100;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+	
+	cell.textLabel.text = [indexPath description];
+	
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+#pragma mark - 
 
 - (void)longPressWithTwoFingerRecognized:(UILongPressGestureRecognizer *)gesture {
 	CGPoint point = [gesture locationInView:gesture.view];
@@ -82,5 +103,21 @@
 	CGPoint point = [gesture locationInView:gesture.view];
 	NSLog(@"pinch: state=%d, point=(%.0f,%.0f), scale=%.2f, velocity=%.2f", gesture.state, point.x, point.y, gesture.scale, gesture.velocity);
 }
+
+#pragma mark - Actions
+
+- (IBAction)simulateLongPress:(id)sender {
+	CGPoint* points = malloc(sizeof(CGPoint)*3);
+	points[0] = CGPointMake(10, 20);
+	points[1] = CGPointMake(20, 20);
+	points[2] = CGPointMake(30, 20);
+	[self.longPressView recognizeLongPress:1 points:3 sequenceOfTouchesInView:points];
+	free(points);
+}
+
+- (IBAction)swipeButtonTap:(id)sender {
+	[self.tableView recognizeSwipe:UISwipeGestureRecognizerDirectionRight];
+}
+
 
 @end

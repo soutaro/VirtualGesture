@@ -27,7 +27,7 @@
 	for (UIGestureRecognizer* r in self.gestureRecognizers) {
 		if ([r isKindOfClass:[UISwipeGestureRecognizer class]]) {
 			UISwipeGestureRecognizer* a = (UISwipeGestureRecognizer*)r;
-			if (a.numberOfTouchesRequired == touches && a.direction == direction) {
+			if (a.numberOfTouchesRequired == touches && (a.direction & direction) > 0) {
 				original = a;
 			}
 		}

@@ -45,6 +45,11 @@
 	return [view convertPoint:self->point_ toView:view];
 }
 
+// Needed by UITableView
+- (CGPoint)startPoint {
+	return self->point_;
+}
+
 #pragma mark -
 
 - (id)initWithOriginalGestureRecognizer:(UISwipeGestureRecognizer *)original {

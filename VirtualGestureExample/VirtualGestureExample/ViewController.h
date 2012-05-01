@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "VirtualGesture.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIView *longPressView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)simulateLongPress:(id)sender;
 - (IBAction)swipeButtonTap:(id)sender;
