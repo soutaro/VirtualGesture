@@ -8,7 +8,7 @@
 
 #import "UIView+VirtualLongPress.h"
 #import "VGVirtualLongPressGestureRecognizer.h"
-#import "UIGestureRecognizer+VirtualGesture.h"
+#import "GestureRecognizerUtil.h"
 
 @implementation UIView (VirtualLongPress)
 

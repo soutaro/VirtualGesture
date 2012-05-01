@@ -7,7 +7,7 @@
 //
 
 #import "UIView+VirtualSwipe.h"
-#import "UIGestureRecognizer+VirtualGesture.h"
+#import "GestureRecognizerUtil.h"
 #import "VGVirtualSwipeGestureRecognizer.h"
 
 @implementation UIView (VirtualSwipe)

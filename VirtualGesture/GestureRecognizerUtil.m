@@ -6,7 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "UIGestureRecognizer+VirtualGesture.h"
+#import "GestureRecognizerUtil.h"
 #import <objc/runtime.h>
 
 void fireGestureRecognizer(id that, UIGestureRecognizer* original) {

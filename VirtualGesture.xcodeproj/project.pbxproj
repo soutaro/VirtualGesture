@@ -11,13 +11,13 @@
 		AB856CA5154D3B9B00447AB2 /* UIView+VirtualLongPress.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB856CA6154D3B9B00447AB2 /* UIView+VirtualLongPress.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */; };
 		AB856CA7154D3BEB00447AB2 /* VirtualGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856C69154D3B3700447AB2 /* VirtualGesture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB856CBE154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */; };
+		AB856CBE154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AB856CBF154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */; };
-		AB856CC2154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */; };
-		AB856CC3154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AB856CD5154EEB9800447AB2 /* UIView+VirtualSwipe.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */; };
+		AB856CC2154D968700447AB2 /* GestureRecognizerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CC0154D968700447AB2 /* GestureRecognizerUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AB856CC3154D968700447AB2 /* GestureRecognizerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CC1154D968700447AB2 /* GestureRecognizerUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AB856CD5154EEB9800447AB2 /* UIView+VirtualSwipe.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB856CD6154EEB9800447AB2 /* UIView+VirtualSwipe.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */; };
-		AB856CD9154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */; };
+		AB856CD9154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AB856CDA154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CD8154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,8 @@
 		AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VirtualLongPress.m"; sourceTree = "<group>"; };
 		AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VGVirtualLongPressGestureRecognizer.h; sourceTree = "<group>"; };
 		AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VGVirtualLongPressGestureRecognizer.m; sourceTree = "<group>"; };
-		AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+VirtualGesture.h"; sourceTree = "<group>"; };
-		AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+VirtualGesture.m"; sourceTree = "<group>"; };
+		AB856CC0154D968700447AB2 /* GestureRecognizerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureRecognizerUtil.h; sourceTree = "<group>"; };
+		AB856CC1154D968700447AB2 /* GestureRecognizerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureRecognizerUtil.m; sourceTree = "<group>"; };
 		AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VirtualSwipe.h"; sourceTree = "<group>"; };
 		AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VirtualSwipe.m"; sourceTree = "<group>"; };
 		AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VGVirtualSwipeGestureRecognizer.h; sourceTree = "<group>"; };
@@ -91,17 +91,11 @@
 			isa = PBXGroup;
 			children = (
 				AB856C69154D3B3700447AB2 /* VirtualGesture.h */,
-				AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */,
-				AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */,
+				AB856CC0154D968700447AB2 /* GestureRecognizerUtil.h */,
+				AB856CC1154D968700447AB2 /* GestureRecognizerUtil.m */,
+				AB856CDD154EF04300447AB2 /* View Extensions */,
+				AB856CDC154EF03200447AB2 /* Virtual GestureRecognizers */,
 				AB856C67154D3B3700447AB2 /* Supporting Files */,
-				AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */,
-				AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */,
-				AB856CC0154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h */,
-				AB856CC1154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m */,
-				AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */,
-				AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */,
-				AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */,
-				AB856CD8154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m */,
 			);
 			path = VirtualGesture;
 			sourceTree = "<group>";
@@ -122,6 +116,28 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AB856CDC154EF03200447AB2 /* Virtual GestureRecognizers */ = {
+			isa = PBXGroup;
+			children = (
+				AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */,
+				AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */,
+				AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */,
+				AB856CD8154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m */,
+			);
+			name = "Virtual GestureRecognizers";
+			sourceTree = "<group>";
+		};
+		AB856CDD154EF04300447AB2 /* View Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */,
+				AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */,
+				AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */,
+				AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */,
+			);
+			name = "View Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -132,7 +148,7 @@
 				AB856CA5154D3B9B00447AB2 /* UIView+VirtualLongPress.h in Headers */,
 				AB856CA7154D3BEB00447AB2 /* VirtualGesture.h in Headers */,
 				AB856CBE154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h in Headers */,
-				AB856CC2154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.h in Headers */,
+				AB856CC2154D968700447AB2 /* GestureRecognizerUtil.h in Headers */,
 				AB856CD5154EEB9800447AB2 /* UIView+VirtualSwipe.h in Headers */,
 				AB856CD9154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h in Headers */,
 			);
@@ -206,7 +222,7 @@
 			files = (
 				AB856CA6154D3B9B00447AB2 /* UIView+VirtualLongPress.m in Sources */,
 				AB856CBF154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m in Sources */,
-				AB856CC3154D968700447AB2 /* UIGestureRecognizer+VirtualGesture.m in Sources */,
+				AB856CC3154D968700447AB2 /* GestureRecognizerUtil.m in Sources */,
 				AB856CD6154EEB9800447AB2 /* UIView+VirtualSwipe.m in Sources */,
 				AB856CDA154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m in Sources */,
 			);
@@ -300,6 +316,7 @@
 				AB856C70154D3B3700447AB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -33,9 +33,6 @@
 		AB856C93154D3B6100447AB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB856C96154D3B6100447AB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		AB856CA8154D3CEB00447AB2 /* libVirtualGesture.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libVirtualGesture.a; path = "../../../Library/Developer/Xcode/DerivedData/VirtualGesture-dqeaiaxjaezqjdbiazrcypszpqck/Build/Products/Debug-iphoneos/libVirtualGesture.a"; sourceTree = "<group>"; };
-		AB856CB0154D3F4C00447AB2 /* VirtualGesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VirtualGesture.h; path = ../VirtualGesture/VirtualGesture.h; sourceTree = SOURCE_ROOT; };
-		AB856CBB154D62B500447AB2 /* UIView+VirtualLongPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+VirtualLongPress.h"; path = "../../VirtualGesture/UIView+VirtualLongPress.h"; sourceTree = "<group>"; };
-		AB856CDB154EEF2100447AB2 /* UIView+VirtualSwipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+VirtualSwipe.h"; path = "../../VirtualGesture/UIView+VirtualSwipe.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +94,6 @@
 		AB856C87154D3B6100447AB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AB856CBB154D62B500447AB2 /* UIView+VirtualLongPress.h */,
-				AB856CDB154EEF2100447AB2 /* UIView+VirtualSwipe.h */,
-				AB856CB0154D3F4C00447AB2 /* VirtualGesture.h */,
 				AB856C88154D3B6100447AB2 /* VirtualGestureExample-Info.plist */,
 				AB856C89154D3B6100447AB2 /* InfoPlist.strings */,
 				AB856C8C154D3B6100447AB2 /* main.m */,
@@ -261,6 +255,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -281,6 +276,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
