@@ -9,3 +9,6 @@
 #import <UIKit/UIKit.h>
 
 void fireGestureRecognizer(id that, UIGestureRecognizer* original);
+
+CGPoint splitLine(CGFloat t, CGPoint p1, CGPoint p2);
+CGPoint pointFromArray(NSArray* point);

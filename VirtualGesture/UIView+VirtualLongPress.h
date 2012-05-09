@@ -10,38 +10,19 @@
 
 @interface UIView (VirtualLongPress)
 
-/*
+/**
  Invoke long press gesture on this view.
  Touch is done in the center of this view.
  */
 - (void)recognizeLongPress;
 
-/*
- Invokes long press gesture on this view.
- Touch is done in the |pointInView|.
+/**
+ |points| is array of x-y pair which represents point in application's coordinate.
+ If size of |points| is only one, there is no pan.
+ If size of |points| is two, pan on a line will be recognized (in 20 moves per second).
+ If size of |points| is three, pan on a quadratic bezier curve will be recognized.
+ If size of |points| is four, pan on a cubic bezier curve will be recognized.
  */
-- (void)recognizeLongPress:(CGPoint)pointInView;
-
-/*
- Invokes long press gesture on this view.
- Touch is done in |pointsInView|, it moves.
- */
-- (void)recognizeLongPress:(NSUInteger)points sequenceOfTouchInView:(CGPoint*)pointsInView;
-
-/*
- Invokes long press gesture on this view.
- |pointsInViews| are as follows:
-   [
-    pointOfFirstFinger[0],
-    pointOfSecondFinger[0],
-    pointOfThirdFinger[0],
-    ...,
-	pointOfFirstFinger[1],
-	pointOfSecondFinger[1],
-	pointOfThirdFinger[1],
-    ...,
-   ]
- */
-- (void)recognizeLongPress:(NSUInteger)touches points:(NSUInteger)points sequenceOfTouchesInView:(CGPoint*)pointsInViews;
+- (void)recognizeLongPressInApp:(NSArray*)points duration:(NSTimeInterval)duration;
 
 @end

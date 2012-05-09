@@ -13,28 +13,17 @@
 @implementation UIView (VirtualLongPress)
 
 - (void)recognizeLongPress {
-	CGSize size = self.frame.size;
-	CGPoint point = CGPointMake(size.width/2, size.height/2);
-	[self recognizeLongPress:point];
+	CGSize size = self.bounds.size;
+	NSArray* point = [NSArray arrayWithObjects:[NSNumber numberWithFloat:size.width/2], [NSNumber numberWithFloat:size.height/2], nil];
+	[self recognizeLongPressInApp:[NSArray arrayWithObject:point] duration:0.5];
 }
 
-- (void)recognizeLongPress:(CGPoint)pointInView {
-	[self recognizeLongPress:1 sequenceOfTouchInView:&pointInView];
-}
-
-- (void)recognizeLongPress:(NSUInteger)points sequenceOfTouchInView:(CGPoint *)pointsInView {
-	[self recognizeLongPress:1 points:1 sequenceOfTouchesInView:pointsInView];
-}
-
-- (void)recognizeLongPress:(NSUInteger)touches points:(NSUInteger)points sequenceOfTouchesInView:(CGPoint *)pointsInViews {
-	NSUInteger startIndex = 0;
-	NSUInteger endIndex = touches * (points-1);
-	
+- (void)recognizeLongPressInApp:(NSArray *)points duration:(NSTimeInterval)duration {
 	UILongPressGestureRecognizer* original = nil;
 	for (UIGestureRecognizer* r in self.gestureRecognizers) {
 		if ([r isKindOfClass:[UILongPressGestureRecognizer class]]) {
 			UILongPressGestureRecognizer* o = (UILongPressGestureRecognizer*)r;
-			if (o.numberOfTouchesRequired == touches) {
+			if (o.numberOfTouchesRequired == 1) {
 				original = o;
 			}
 		}
@@ -44,24 +33,106 @@
 		return;
 	}
 	
-	VGVirtualLongPressGestureRecognizer* v = [VGVirtualLongPressGestureRecognizer newVirtualLongPressGestureRecognizer:original];
-	
-	[v setState:UIGestureRecognizerStateBegan];
-	[v setTouches:touches points:pointsInViews+startIndex];
-	fireGestureRecognizer(v, original);
-	[v clearTouches];
-	
-	for (NSUInteger i = 0; i < points; i++) {
-		[v setState:UIGestureRecognizerStateChanged];
-		[v setTouches:touches points:pointsInViews+i*touches];
-		fireGestureRecognizer(v, original);
-		[v clearTouches];
+	UIView* appView = self;
+	while (![appView.superview isKindOfClass:[UIWindow class]]) {
+		appView = appView.superview;
 	}
 	
-	[v setState:UIGestureRecognizerStateEnded];
-	[v setTouches:touches points:pointsInViews+endIndex];
-	fireGestureRecognizer(v, original);
-	[v clearTouches];
+	NSMutableArray* normalizedPoints = [points mutableCopy];
+	if ([normalizedPoints count] == 1) {
+		[normalizedPoints addObject:[points lastObject]];
+	}
+	
+	// 20 FPS
+	NSUInteger steps = duration * 20;
+	CGPoint* ps = malloc(sizeof(CGPoint) * steps);
+	CGFloat diff = 1.0 / steps;
+	
+	CGPoint firstPoint = pointFromArray([normalizedPoints objectAtIndex:0]);
+	CGPoint lastPoint = pointFromArray([normalizedPoints lastObject]);
+	
+	if ([normalizedPoints count] == 2) {
+		for (NSUInteger i = 0; i < steps; i++) {
+			CGFloat t = diff * i;
+			ps[i] = splitLine(t, firstPoint, lastPoint);
+		}
+	}
+	if ([normalizedPoints count] == 3) {
+		CGPoint p0 = pointFromArray([normalizedPoints objectAtIndex:0]);
+		CGPoint p1 = pointFromArray([normalizedPoints objectAtIndex:1]);
+		CGPoint p2 = pointFromArray([normalizedPoints objectAtIndex:2]);
+		
+		CGPoint p3, p4, p5;
+		
+		for (NSUInteger i = 0; i < steps; i++) {
+			CGFloat t = diff * i;
+			
+			p3 = splitLine(t, p0, p1);
+			p4 = splitLine(t, p1, p2);
+			p5 = splitLine(t, p3, p4);
+			
+			ps[i] = p5;
+		}
+	}
+
+	if ([normalizedPoints count] == 4) {
+		CGPoint p0 = pointFromArray([normalizedPoints objectAtIndex:0]);
+		CGPoint p1 = pointFromArray([normalizedPoints objectAtIndex:1]);
+		CGPoint p2 = pointFromArray([normalizedPoints objectAtIndex:2]);
+		CGPoint p3 = pointFromArray([normalizedPoints objectAtIndex:3]);
+		
+		CGPoint p4, p5, p6, p7, p8, p9;
+		
+		for (NSUInteger i = 0; i < steps; i++) {
+			CGFloat t = diff * i;
+			
+			p4 = splitLine(t, p0, p1);
+			p5 = splitLine(t, p1, p2);
+			p6 = splitLine(t, p2, p3);
+			
+			p7 = splitLine(t, p4, p5);
+			p8 = splitLine(t, p5, p6);
+			
+			p9 = splitLine(t, p7, p8);
+			
+			ps[i] = p9;
+		}
+	}
+
+	VGVirtualLongPressGestureRecognizer* v = [VGVirtualLongPressGestureRecognizer newVirtualLongPressGestureRecognizer:original];
+	[v setPointView:appView];
+	
+	dispatch_async(dispatch_get_main_queue(), ^ {
+		[v setState:UIGestureRecognizerStateBegan];
+		[v setTouches:1 points:&firstPoint];
+		fireGestureRecognizer(v, original);
+		[v clearTouches];
+	});
+	
+	double delayInSeconds = 0;
+	
+	for (NSUInteger i = 0; i < steps; i++) {
+		delayInSeconds = i * 0.05;
+
+		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+		dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+			[v setState:UIGestureRecognizerStateChanged];
+			[v setTouches:1 points:ps+i];
+			fireGestureRecognizer(v, original);
+			[v clearTouches];
+		});
+	}
+	
+	delayInSeconds = duration;// [duration floatValue];
+	dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+	dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+		[v setState:UIGestureRecognizerStateEnded];
+		[v setTouches:1 points:&lastPoint];
+		fireGestureRecognizer(v, original);
+		[v clearTouches];
+		
+		free(ps);
+	});
 }
 
 @end

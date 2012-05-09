@@ -24,3 +24,10 @@ void fireGestureRecognizer(id that, UIGestureRecognizer* original) {
 	}
 }
 
+CGPoint splitLine(CGFloat t, CGPoint p1, CGPoint p2) {
+	return CGPointMake(p1.x*(1-t) + p2.x*t, p1.y*(1-t) + p2.y*t);
+}
+
+CGPoint pointFromArray(NSArray* point) {
+	return CGPointMake([[point objectAtIndex:0] floatValue], [[point objectAtIndex:1] floatValue]);
+}

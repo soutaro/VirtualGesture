@@ -11,6 +11,7 @@
 @implementation VGVirtualLongPressGestureRecognizer {
 	CGPoint* _points;
 	NSUInteger _fingers;
+	UIView* _pointView;
 }
 
 #pragma mark - NSObject
@@ -32,11 +33,11 @@
 	
 	CGPoint point = CGPointMake(x/self->_fingers, y/self->_fingers);
 	
-	return [self.parent.view convertPoint:point toView:view];
+	return [_pointView convertPoint:point toView:view];
 }
 
 - (CGPoint)locationOfTouch:(NSUInteger)touchIndex inView:(UIView *)view {
-	return [self.parent.view convertPoint:self->_points[touchIndex] toView:view];
+	return [_pointView convertPoint:self->_points[touchIndex] toView:view];
 }
 
 - (NSUInteger)numberOfTouches {
@@ -50,7 +51,11 @@
 	return g;
 }
 
-- (void)setTouches:(NSUInteger)fingers points:(CGPoint *)points {
+- (void)setPointView:(UIView *)view {
+	_pointView = view;
+}
+
+- (void)setTouches:(NSUInteger)fingers points:(const CGPoint *)points {
 	self->_fingers = fingers;
 	self->_points = malloc(sizeof(CGPoint) * fingers);
 	memcpy(self->_points, points, fingers * sizeof(CGPoint));

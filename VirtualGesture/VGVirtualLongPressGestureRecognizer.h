@@ -14,7 +14,8 @@
 
 + (id)newVirtualLongPressGestureRecognizer:(UILongPressGestureRecognizer*)parent;
 
-- (void)setTouches:(NSUInteger)fingers points:(CGPoint*)points;
+- (void)setPointView:(UIView*)view;
+- (void)setTouches:(NSUInteger)fingers points:(const CGPoint*)points;
 - (void)clearTouches;
 
 @end
