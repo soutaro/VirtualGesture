@@ -11,3 +11,4 @@
 #import "UIView+VirtualLongPress.h"
 #import "UIView+VirtualSwipe.h"
 #import "UIView+VirtualPinch.h"
+#import "UIView+VirtualPan.h"

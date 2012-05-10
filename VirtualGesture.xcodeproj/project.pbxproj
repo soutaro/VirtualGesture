@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB31ECC3155BACD000B00748 /* UIView+VirtualPan.h in Headers */ = {isa = PBXBuildFile; fileRef = AB31ECC1155BACD000B00748 /* UIView+VirtualPan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB31ECC4155BACD000B00748 /* UIView+VirtualPan.m in Sources */ = {isa = PBXBuildFile; fileRef = AB31ECC2155BACD000B00748 /* UIView+VirtualPan.m */; };
+		AB31ECC9155BAD3900B00748 /* VGVirtualPanGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB31ECC7155BAD3900B00748 /* VGVirtualPanGestureRecognizer.h */; };
+		AB31ECCA155BAD3900B00748 /* VGVirtualPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB31ECC8155BAD3900B00748 /* VGVirtualPanGestureRecognizer.m */; };
 		AB856C65154D3B3700447AB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB856C64154D3B3700447AB2 /* Foundation.framework */; };
 		AB856CA5154D3B9B00447AB2 /* UIView+VirtualLongPress.h in Headers */ = {isa = PBXBuildFile; fileRef = AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB856CA6154D3B9B00447AB2 /* UIView+VirtualLongPress.m in Sources */ = {isa = PBXBuildFile; fileRef = AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB31ECC1155BACD000B00748 /* UIView+VirtualPan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VirtualPan.h"; sourceTree = "<group>"; };
+		AB31ECC2155BACD000B00748 /* UIView+VirtualPan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VirtualPan.m"; sourceTree = "<group>"; };
+		AB31ECC7155BAD3900B00748 /* VGVirtualPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VGVirtualPanGestureRecognizer.h; sourceTree = "<group>"; };
+		AB31ECC8155BAD3900B00748 /* VGVirtualPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VGVirtualPanGestureRecognizer.m; sourceTree = "<group>"; };
 		AB856C61154D3B3700447AB2 /* libVirtualGesture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVirtualGesture.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB856C64154D3B3700447AB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB856C68154D3B3700447AB2 /* VirtualGesture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VirtualGesture-Prefix.pch"; sourceTree = "<group>"; };
@@ -135,10 +143,12 @@
 				AB9C0F1015501CC10030A35F /* VGVirtualGestureRecognizer.m */,
 				AB856CBC154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.h */,
 				AB856CBD154D630A00447AB2 /* VGVirtualLongPressGestureRecognizer.m */,
-				AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */,
-				AB856CD8154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m */,
+				AB31ECC7155BAD3900B00748 /* VGVirtualPanGestureRecognizer.h */,
+				AB31ECC8155BAD3900B00748 /* VGVirtualPanGestureRecognizer.m */,
 				AB9C0F0B15501C970030A35F /* VGVirtualPinchGestureRecognizer.h */,
 				AB9C0F0C15501C970030A35F /* VGVirtualPinchGestureRecognizer.m */,
+				AB856CD7154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.h */,
+				AB856CD8154EECB800447AB2 /* VGVirtualSwipeGestureRecognizer.m */,
 			);
 			name = "Virtual GestureRecognizers";
 			sourceTree = "<group>";
@@ -148,10 +158,12 @@
 			children = (
 				AB856CA3154D3B9B00447AB2 /* UIView+VirtualLongPress.h */,
 				AB856CA4154D3B9B00447AB2 /* UIView+VirtualLongPress.m */,
-				AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */,
-				AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */,
+				AB31ECC1155BACD000B00748 /* UIView+VirtualPan.h */,
+				AB31ECC2155BACD000B00748 /* UIView+VirtualPan.m */,
 				AB9C0EFD15501B0D0030A35F /* UIView+VirtualPinch.h */,
 				AB9C0EFE15501B0D0030A35F /* UIView+VirtualPinch.m */,
+				AB856CD3154EEB9800447AB2 /* UIView+VirtualSwipe.h */,
+				AB856CD4154EEB9800447AB2 /* UIView+VirtualSwipe.m */,
 			);
 			name = "View Extensions";
 			sourceTree = "<group>";
@@ -172,6 +184,8 @@
 				AB9C0EFF15501B0D0030A35F /* UIView+VirtualPinch.h in Headers */,
 				AB9C0F0D15501C970030A35F /* VGVirtualPinchGestureRecognizer.h in Headers */,
 				AB9C0F1115501CC10030A35F /* VGVirtualGestureRecognizer.h in Headers */,
+				AB31ECC3155BACD000B00748 /* UIView+VirtualPan.h in Headers */,
+				AB31ECC9155BAD3900B00748 /* VGVirtualPanGestureRecognizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +263,8 @@
 				AB9C0F0015501B0D0030A35F /* UIView+VirtualPinch.m in Sources */,
 				AB9C0F0E15501C970030A35F /* VGVirtualPinchGestureRecognizer.m in Sources */,
 				AB9C0F1215501CC10030A35F /* VGVirtualGestureRecognizer.m in Sources */,
+				AB31ECC4155BACD000B00748 /* UIView+VirtualPan.m in Sources */,
+				AB31ECCA155BAD3900B00748 /* VGVirtualPanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
